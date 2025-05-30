@@ -28,3 +28,5 @@ sudo php -r "system('/bin/bash');”  |este si
 
 --Inyección básica
 admin' or '1'='1'-- -
+
+https://github.com/t0rr4l/Writeups_Hacking/blob/main/DockerLabs/Showtime.md
