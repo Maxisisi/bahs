@@ -1,0 +1,26 @@
+/Comprobar conexión/
+https://192.168.56.101/restconf
+	GET
+	Authorization -> Basic Auth -> cisco-cisco123!
+	Headers -> Accept | application/yang-data+json Content-Type | application/yang-data+json
+	SEND
+/Ver info de interfaces/
+https://192.168.101.21/restconf/data/ietf-interfaces:interfaces
+	GET
+	SEND
+/Ver formato configurar interfaces/
+	*Crear loopback en router*
+https://192.168.101.21/restconf/data/ietf-interfaces:interfaces/interface=Loopback0
+	GET
+	SEND
+/Enviar configuración a interfaz/
+	*Usar formato y editarlo*
+https://192.168.101.21/restconf/data/ietf-interfaces:interfaces/interface=Loopback2
+	PUT
+	Body -> raw
+	*Pegar código*
+	SEND
+/Eliminar interfaz/
+https://192.168.101.21/restconf/data/ietf-interfaces:interfaces/interface=Loopback0
+	DELETE
+	SEND
