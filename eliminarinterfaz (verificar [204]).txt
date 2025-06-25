@@ -1,0 +1,16 @@
+import json
+import requests
+import urllib3
+urllib3.disable_warnings()
+
+url = "https://192.168.56.101/restconf/data/ietf-interfaces:interfaces/interface=Loopback30"
+
+header = {
+    "Accept":"application/yang-data+json",
+    "Content-Type":"application/yang-data+json"
+}
+
+auth = ("cisco","cisco123!")
+
+req = requests.delete(url, headers=header, auth=auth, verify=False)
+print(req)
